@@ -1,0 +1,25 @@
+.carrusel {
+    display: none;
+}
+
+
+@media screen and (min-width:600px) {
+    .carrusel {
+        display: initial;
+
+        .carousel .slide {
+            border: 1px solid black;
+            justify-content: center;
+            background-color: aqua;
+            height: 100%;
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    .carrusel {
+        display: initial;
+    }
+}
+

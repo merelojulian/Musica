@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Guitarra Acústica Mini",
+        "price": "299",
+        "image": "img/prod1.png"
+    },
+    {
+        "id": 2,
+        "name": "Kanikama Les Paul",
+        "price": "499",
+        "image": "img/prod2.png"
+    },
+    {
+        "id": 3,
+        "name": "Guitarra de Acero",
+        "price": "599",
+        "image": "img/prod3.png"
+    },
+    {
+        "id": 4,
+        "name": "Paraols Ukelele",
+        "price": "699",
+        "image": "img/prod4.png"
+    },
+    {
+        "id": 5,
+        "name": "Fender Stratocaster",
+        "price": "899",
+        "image": "img/prod5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Guitarra Criolla Fonseca",
+        "price": "199",
+        "image": "img/prod6.png"
+    },
+    {
+        "id": 7,
+        "name": "Json Les Paul Metal",
+        "price": "399",
+        "image": "img/prod7.png"
+    },
+    {
+        "id": 8,
+        "name": "Les Paul Esmeralda",
+        "price": "799",
+        "image": "img/prod8.png"
+    },
+    {
+        "id": 9,
+        "name": "Squier Stratocaster",
+        "price": "499",
+        "image": "img/prod9.png"
+    },
+    {
+        "id": 10,
+        "name": "Guitarra Eléctrica Grolsh",
+        "price": "699",
+        "image": "img/prod10.png"
+    }
+]

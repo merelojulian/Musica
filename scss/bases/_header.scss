@@ -1,0 +1,84 @@
+@use "../utilidades/extend" as *;
+
+header {
+    background-color: black;
+    nav {
+        justify-content: space-between;
+
+        .container-fluid {
+            margin: 0 5rem;
+
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                }
+            }
+        }
+
+        @extend %efecto-titulo;
+
+        .navbar-nav {
+            margin: 0 auto;
+            text-align: center;
+
+            .nav-link {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: #007bff;
+                }
+
+                &.active {
+                    color: #007bff;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .icon-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: #333;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                border-color: #007bff;
+                background-color: #e7f0fc;
+                transform: scale(1.05);
+
+                .cart {
+                    color: black;
+                }
+            }
+
+            .cart {
+                font-size: 1.5rem;
+                color: white;
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: white;
+                background-color: red;
+                border-radius: 50%;
+                position: relative;
+                top: -5px;
+                right: -5px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}

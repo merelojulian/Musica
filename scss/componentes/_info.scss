@@ -1,0 +1,177 @@
+// .info {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+
+//     padding: 20px 10px;
+
+//     .info-item {
+//         text-align: center;
+
+//         a {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-decoration: none;
+//             color: #333;
+//             font-size: 0.5rem;
+//             position: relative; // Necesario para posicionar el texto emergente
+//             transition: 0.3s;
+
+//             i {
+//                 font-size: 2rem;
+//                 margin-bottom: 5px;
+//                 color: #007bff;
+//                 transition: transform 0.3s;
+//             }
+
+//             span {
+//                 position: absolute;
+//                 bottom: -25px; // Ajusta según el espacio que necesites
+//                 background-color: rgba(0, 0, 0, 0.8);
+//                 color: #fff;
+//                 padding: 5px 10px;
+//                 border-radius: 5px;
+//                 font-size: 0.8rem;
+//                 white-space: nowrap;
+//                 opacity: 0;
+//                 visibility: hidden;
+//                 transform: translateY(10px);
+//                 transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+//             }
+
+//             &:hover {
+//                 i {
+//                     transform: scale(1.2); // Efecto de agrandamiento en el ícono
+//                 }
+
+//                 span {
+//                     opacity: 1;
+//                     visibility: visible;
+//                     transform: translateY(0);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// @media screen and (min-width: 600px) {
+//     .info {
+//         display: flex;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         padding: 20px 15px;
+
+//         .info-item {
+//             display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             margin: 0 10px;
+
+//             a {
+//                 display: flex;
+//                 align-items: center;
+//                 text-decoration: none;
+//                 color: #333;
+//                 font-size: 1rem;
+
+//                 i {
+//                     font-size: 2.5rem;
+//                     margin-right: 10px;
+//                 }
+
+//                 span {
+//                     font-size: 1.2rem;
+//                     visibility: visible;
+//                     opacity: 1;
+//                     transition: 0.3s ease;
+//                 }
+
+//                 &:hover {
+//                     color: #007bff;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.info {
+    display: flex;
+    flex-direction: column; // Para diseño vertical en pantallas pequeñas
+    gap: 20px;
+    padding: 20px 10px;
+
+    .info-item {
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+            background-color: black;
+            color: whitesmoke;
+            transition: 0.4s;
+
+            i {
+                color: white;
+            }
+
+            span {
+                color: #007bff;
+            }
+        }
+
+        i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        p,
+        ul {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+
+            li {
+                margin-bottom: 5px;
+
+                &::before {
+                    content: '•';
+                    color: #007bff;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        flex-direction: row; // Diseño horizontal en pantallas más grandes
+        justify-content: space-around;
+
+        .info-item {
+            width: 30%; // Ajusta el tamaño de cada ítem
+        }
+    }
+}

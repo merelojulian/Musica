@@ -1,0 +1,8 @@
+
+@use "bases/_reset" as *;      // Importa _reset.scss sin prefijo
+@use "bases/_header" as *;     // Importa _header.scss sin prefijo
+@use "componentes/_info" as *; // Importa _info.scss sin prefijo
+@use "componentes/_products" as *; // Importa _products.scss sin prefijo
+@use "componentes/_carrusel" as *; // Importa _carrusel.scss sin prefijo
+@use "bases/_footer" as *;     // Importa _footer.scss sin prefijo
+@use "componentes/_carrito" as *; // Importa _carrito.scss sin prefijo

@@ -1,0 +1,31 @@
+%efecto-titulo {
+    .neon-text {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.3s linear;
+        color: transparent;
+        -webkit-text-stroke: 0.1px blue;
+        background-image: linear-gradient(to left, violet, rgb(33, 84, 226), black, rgb(35, 31, 31));
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: move 30s linear infinite;
+
+        &:hover {
+            color: rgb(238, 130, 238);
+            text-shadow: 0 0 10px rgb(29, 29, 190),
+                0 0 20px rgb(29, 29, 190),
+                0 0 40px rgb(29, 29, 190),
+                0 0 80px rgb(29, 29, 190),
+                0 0 160px rgb(29, 29, 190),
+                0 0 320px rgb(29, 29, 190);
+        }
+    }
+
+    @keyframes move {
+        100% {
+            background-position: 2000px 0;
+        }
+    }
+}

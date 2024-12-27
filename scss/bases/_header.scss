@@ -2,6 +2,17 @@
 
 header {
     background-color: black;
+    position: fixed; // Fijar la barra en la parte superior
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9); // Fondo con transparencia por defecto
+    transition: background-color 0.3s ease; // Transición suave para el cambio de transparencia
+
+    &.scrolled {
+        background-color: rgba(0, 0, 0, 0.7); // Más transparente al hacer scroll
+    }
+
     nav {
         justify-content: space-between;
 

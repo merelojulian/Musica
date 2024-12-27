@@ -5,15 +5,16 @@
         cursor: pointer;
         transition: 0.3s linear;
         color: transparent;
-        -webkit-text-stroke: 0.1px blue;
-        background-image: linear-gradient(to left, violet, rgb(33, 84, 226), black, rgb(35, 31, 31));
+        -webkit-text-stroke: 0.1px;
+        -webkit-text-stroke-color: white;
+        background-image: linear-gradient(to left, rgb(226, 43, 226), rgb(33, 84, 226), black, rgb(35, 31, 31));
         background-size: 200%;
         background-clip: text;
         -webkit-background-clip: text;
         animation: move 30s linear infinite;
 
         &:hover {
-            color: rgb(238, 130, 238);
+            color: rgb(226, 43, 226);
             text-shadow: 0 0 10px rgb(29, 29, 190),
                 0 0 20px rgb(29, 29, 190),
                 0 0 40px rgb(29, 29, 190),

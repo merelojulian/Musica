@@ -1,62 +1,62 @@
 [
     {
         "id": 1,
-        "name": "Guitarra Acústica Mini",
-        "price": "299",
-        "image": "img/prod1.png"
+        "name": "YAMAHA FSX315 Guitarra Electro Acustica Folk Serie F",
+        "price": "608.686",
+        "image": "img/prod1.jpg"
     },
     {
         "id": 2,
-        "name": "Kanikama Les Paul",
-        "price": "499",
-        "image": "img/prod2.png"
+        "name": "TAGIMA TW-55 BS LF BK GUITARRA ELECTRICA TW SERIES COLOR BUTTER SCOTCH",
+        "price": "501.733",
+        "image": "img/prod2.jpg"
     },
     {
         "id": 3,
-        "name": "Guitarra de Acero",
-        "price": "599",
-        "image": "img/prod3.png"
+        "name": "TAGIMA TW-61 OWH DF TT GUITARRA ELECTRICA TW SERIES COLOR OLYMPIC WHITE",
+        "price": "623.723",
+        "image": "img/prod3.jpg"
     },
     {
         "id": 4,
-        "name": "Paraols Ukelele",
-        "price": "699",
-        "image": "img/prod4.png"
+        "name": "EPIPHONE EILMSBUNH1 Guitarra Electrica LP MODERN SBU Color Rojo",
+        "price": "699.000",
+        "image": "img/prod4.jpg"
     },
     {
         "id": 5,
-        "name": "Fender Stratocaster",
-        "price": "899",
+        "name": "SQUIER 037-0600-532 Stratocaster Affinity",
+        "price": "566.674",
         "image": "img/prod5.jpg"
     },
     {
         "id": 6,
-        "name": "Guitarra Criolla Fonseca",
-        "price": "199",
-        "image": "img/prod6.png"
+        "name": "LA ALPUJARRA 400KINK-NAT GUITARRA SIN BOCA CON CORTE Y ECUALIZADOR FISHMAN INK-400",
+        "price": "976.242",
+        "image": "img/prod6.jpg"
     },
     {
         "id": 7,
-        "name": "Json Les Paul Metal",
-        "price": "399",
-        "image": "img/prod7.png"
+        "name": "EPIPHONE EILOHBNH1 Guitarra Eléctrica LES PAUL CLASSIC Honey Burst",
+        "price": "1.461.651",
+        "image": "img/prod7.jpg"
     },
     {
         "id": 8,
-        "name": "Les Paul Esmeralda",
-        "price": "799",
-        "image": "img/prod8.png"
+        "name": "NEWEN TL Natural Wood Guitarra Eléctrica Telecaster Madera maciza (no laminada)",
+        "price": "263.005",
+        "image": "img/prod8.jpg"
     },
     {
         "id": 9,
-        "name": "Squier Stratocaster",
-        "price": "499",
-        "image": "img/prod9.png"
+        "name": "IBANEZ GAX30TCR Guitarra Eléctrica - (Cereza Transparente)",
+        "price": "656.843",
+        "image": "img/prod9.jpg"
     },
     {
         "id": 10,
-        "name": "Guitarra Eléctrica Grolsh",
-        "price": "699",
-        "image": "img/prod10.png"
+        "name": "FENDER FA-345CE AUDITORIUM, NAT GUITARRA ELECTROACUSTICA FENDER",
+        "price": "820.673",
+        "image": "img/prod10.jpg"
     }
 ]

@@ -16,23 +16,30 @@ cerrarCarrito.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
+// Carga la info de los productos al html
 const addDataToHTML = () => {
-    cargarProductos.innerHTML = '';
-    if (listProducts.length > 0) {
-        listProducts.forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.dataset.id = product.id;
-            newProduct.classList.add('item');
-            newProduct.innerHTML = `
-                <img src="${product.image}" alt="" class="card__img">
-                <h3 class="card__name">${product.name}</h3>
-                <div class="card__price">$${product.price}</div>
-                <button class="card__button">Añadir Al Carrito</button>`;
-            cargarProductos.appendChild(newProduct);
-        });
+    try {
+        cargarProductos.innerHTML = '';
+        if (listProducts.length > 0) {
+            listProducts.forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.dataset.id = product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = `
+                    <img src="${product.image}" alt="" class="card__img">
+                    <h3 class="card__name">${product.name}</h3>
+                    <div class="card__price">$${product.price}</div>
+                    <button class="card__button">Añadir Al Carrito</button>`;
+                cargarProductos.appendChild(newProduct);
+            });
+        }
+    } catch (error) {
+        console.error('Error al cargar los productos:', error);
     }
 };
 
+
+// Permite añadir productos al carrito
 cargarProductos.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('card__button')) {
@@ -50,10 +57,12 @@ cargarProductos.addEventListener('click', (event) => {
     }
 });
 
+// Setea en el Local Storage
 const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(carts));
 }
 
+// Carga la info de los productos al carrito
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
     if (positionThisProductInCart < 0) {
@@ -68,6 +77,21 @@ const addToCart = (product_id) => {
     addCartToMemory();
 };
 
+
+// Calcula el valor del precio total 
+const calcularTotal = () => {
+    let total = 0;
+    carts.forEach(cart => {
+        let product = listProducts.find(product => product.id == cart.product_id);
+        if (product) {
+            total += product.price * cart.quantity;
+        }
+    });
+    return total;
+};
+
+
+// Carga el html del producto al carrito y calcula cantidad y precio de un mismo producto
 const addCartToHTML = () => {
     cargarCarrito.innerHTML = '';
     let totalQuantity = 0;
@@ -118,7 +142,7 @@ const addCartToHTML = () => {
     contadorCarrito.innerText = totalQuantity;
 };
 
-
+// Permite sumar o restar un producto desde el carrito
 cargarCarrito.addEventListener('click', (event) => {
     const positionClick = event.target;
 
@@ -135,7 +159,7 @@ cargarCarrito.addEventListener('click', (event) => {
     }
 });
 
-
+// Muestra la cantidad de productos que hay en el carrito
 const changeQuantity = (product_id, type) => {
     const positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
 
@@ -154,6 +178,7 @@ const changeQuantity = (product_id, type) => {
     addCartToHTML();
 };
 
+// Elimina el carrito en su totalidad
 eliminarCarrito.addEventListener('click', () => {
     Swal.fire({
         title: "¿Estás seguro?",
@@ -181,17 +206,7 @@ eliminarCarrito.addEventListener('click', () => {
 });
 
 
-const calcularTotal = () => {
-    let total = 0;
-    carts.forEach(cart => {
-        let product = listProducts.find(product => product.id == cart.product_id);
-        if (product) {
-            total += product.price * cart.quantity;
-        }
-    });
-    return total;
-};
-
+// Inicia la App
 const initApp = () => {
     fetch('products.json')
         .then(response => response.json())
@@ -205,6 +220,5 @@ const initApp = () => {
             }
         })
 };
-
 
 initApp();

@@ -1,0 +1,68 @@
+$primary-color: #66ccff;
+$secondary-color: #333;
+$font-stack: 'Arial, sans-serif';
+
+
+.contact-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    h1 {
+        text-align: center;
+        color: $primary-color;
+
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: $secondary-color;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            &:focus {
+                color: #66ccff;
+                outline: none;
+            }
+        }
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+    }
+
+    #feedback {
+        margin-top: 20px;
+        text-align: center;
+        color: $primary-color;
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
